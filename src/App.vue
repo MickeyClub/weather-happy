@@ -1,28 +1,44 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <!-- <img src="./assets/img/girl.jpg" alt=""> -->
+    <HelloWorld ></HelloWorld>
+    <happy :xxx='imgList'></happy>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import HelloWorld from "./components/HelloWorld.vue";
+import happy from "./components/happy.vue";
 
 export default {
-  name: 'app',
+  name: "app",
+  data(){
+    return{
+        imgList: [
+          "./assets/img/happy/01.jpg",
+          "./assets/img/happy/02.jpg",
+          "./assets/img/happy/03.jpg",
+          "./assets/img/happy/04.jpg",
+          "./assets/img/happy/05.jpg",
+          "./assets/img/happy/06.jpg",
+          "./assets/img/happy/07.jpg",
+          "./assets/img/happy/08.jpg",
+          ]
+    }
+  },
+
+
   components: {
-    HelloWorld
+
+    HelloWorld,
+    happy
   }
-}
+};
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+/* body {
+  background-color: red;
+} */
 </style>
+
